@@ -32,7 +32,7 @@ The script should be execiuted as a cron job since it polls the Internet Archive
 
 ```
 # Reprocess OCR once an hour
-0 * * * * /usr/bin/php /path/to/reprocess.php > /path/to/reprocess.log 2>&1
+0 * * * * cd /path/ && /usr/bin/php /path/to/reprocess.php > /path/to/reprocess.log 2>&1
 ```
 
 # Output
