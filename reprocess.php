@@ -2,6 +2,8 @@
 require 'settings.php';
 require 'IAHelper.php';
 
+chdir(__DIR__);
+
 $files = [
 	'items' => fopen('data/items.csv', 'r'),
 	'items.tmp' => fopen('data/items.csv.tmp', 'a'),
@@ -184,6 +186,7 @@ echo sprintf("\n=> FINISHED: %s\n\n", date('F j, Y, g:i a'));
 
 // Close the file handlers.
 foreach ($files as $fp) {
+    echo "Closing ...\n";
     fclose($fp);
 }
 
